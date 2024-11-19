@@ -1,0 +1,32 @@
+# file types to ignore
+
+# code temporary file types
+*.asv
+
+# input file types
+*.xml
+*.xls
+*.xlsx
+
+# output file types
+*.txt
+*.csv
+*.mat
+*.h5
+
+*.jpg
+*.png
+*.bmp
+*.fig
+*.svg
+
+*.avi
+*.gif
+*.mp4
+
+# report file types
+*.rpt
+*.pdf
+*.doc
+*.docx
+*.html
