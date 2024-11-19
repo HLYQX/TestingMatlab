@@ -19,7 +19,7 @@ CalcStep=0.05;
 
 %% 结果后处理
 HandleFigure=figure(Name='TestPID',...
-    Position=[1920+10 10 1920/1.5 1080/1.5]);
+    Position=[80 10 1920/1.5 1080/1.5]);
 hold on;
 plot(Time,Results(:,2),LineWidth=2,Color='b');
 plot(Time,Paras.ExpectedVelocity*ones(length(Results(:,2))),LineWidth=1.5,Color='r',LineStyle='--');
