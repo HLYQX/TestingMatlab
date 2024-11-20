@@ -4,6 +4,12 @@ clear;clc;close all
 %% xml文件名称
 XMLName="XmlWrite.xml";
 
+%% 不存在则先行写入
+if ~exist(XMLName,'file')
+    TestXmlWrite();
+    clearvars -except XMLName;
+end
+
 %% 获取文件节点对象
 DocEle=xmlread(XMLName);
 
@@ -24,6 +30,7 @@ disp(['Self_Num = ',num2str(Num)]);
 disp(newline);
 
 %% 获取子子节点1
+% 因仅有一个子子节点，两种方式
 ChildChildEle1=ChildEle1.getElementsByTagName("ChildChildEle1").item(0);
 ChildChildEle1=ChildEle1.getFirstElementChild();
 % 获取节点名称
@@ -58,4 +65,3 @@ Mat=transpose(reshape(str2num(ChildEle3.getTextContent()),[3 3]));
 disp(['TextContent = ',mat2str(Mat)]);
 % 输出空行
 disp(newline);
-

@@ -4,6 +4,10 @@ clear;clc;close all
 %% xml文件名称
 XMLName="XmlWrite.xml";
 
+%% 重新调写入脚本防止出错
+TestXmlWrite();
+clearvars -except XMLName;
+
 %% 获取文件节点对象
 DocEle=xmlread(XMLName);
 
