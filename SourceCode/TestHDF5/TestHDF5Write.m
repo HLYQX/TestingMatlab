@@ -36,6 +36,7 @@ for x=1:NumRows
 end
 
 % 数据的维度数
+Rank4=ndims(MatWriteDim4);
 Rank3=ndims(MatWriteDim3);
 Rank2=ndims(MatWriteDim2);
 
